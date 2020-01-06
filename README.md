@@ -18,4 +18,7 @@ Below are details on how to run the DICS-BF in BS,
 6. Choosing the frequncy of intervals, post vs pre, a suggestion is provided based on gloab power spression of induced resposnes.
 <!-- <img src="images/5_screenshot.png" width="600"> -->
 <!-- <img src="images/6_screenshot.png" width="600"> -->
+
+<p align="center">
 <img src="images/7_screenshot.png" width="600">
+</p>
