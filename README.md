@@ -7,4 +7,4 @@ This implementation has mainly meant to provide robust localization of oscillato
 
 Below are details on how to run the DICS-BF under BS,
 1. Adding "process_ft_sourceanalysis_DICS_BF.m" to BS functions directory folder, eg, '../brainstorm3/toolbox/process/functions/'
-2. ![](images/1_Screenshot-Brainstorm%2013-Oct-2019.png)
+2. ![](images/1_screenshot.png)
