@@ -9,5 +9,5 @@ Below are details on how to run the DICS-BF under BS,
 1. Adding "process_ft_sourceanalysis_DICS_BF.m" to BS functions directory folder, eg, '../brainstorm3/toolbox/process/functions/'
 2. Add all trail resposnes to the process window
 
-<img src="images/1_screenshot.png">
-![](images/1_screenshot.png)
+<img src="images/1_screenshot.png" width="100">
+
