@@ -1,2 +1,4 @@
 # DICS-beamformer-for-Brainstorm
-A DICS beamformer implementation for Brainstorm
+This is a DICS beamformer implementation for Brainstorm software package.
+
+
