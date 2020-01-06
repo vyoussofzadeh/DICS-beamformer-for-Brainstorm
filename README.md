@@ -7,7 +7,8 @@ This implementation has mainly meant to provide robust localization of oscillato
 
 Below are details on how to run the DICS-BF under BS,
 1. Adding "process_ft_sourceanalysis_DICS_BF.m" to BS functions directory folder, eg, '../brainstorm3/toolbox/process/functions/'
-2. Add all trail resposnes to the process window
-
+2. Add trails to the process window
 <img src="images/1_screenshot.png" width="500">
-
+3. selecting DCIS source modelling
+<img src="images/2_screenshot.png" width="500">
+3. 
