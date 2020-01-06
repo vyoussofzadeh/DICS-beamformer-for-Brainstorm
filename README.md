@@ -6,4 +6,4 @@ The dynamic imaging of coherent sources (DICS) beamformer technique that enables
 This implementation has mainly meant to provide robust localization of oscillatory dynamics due to task MEG activations.
 
 Below are details on how to run the DICS-BF under BS,
-
+1. Adding "process_ft_sourceanalysis_DICS_BF.m" to BS directory, eg, '/usr/local/MATLAB_Tools/brainstorm3/toolbox/process/functions/'
