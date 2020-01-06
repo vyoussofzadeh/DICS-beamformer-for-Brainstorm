@@ -7,15 +7,15 @@ This implementation has mainly meant to provide robust localization of oscillato
 Below are details on how to run the DICS-BF in BS,
 1. Add "process_ft_sourceanalysis_DICS_BF.m" to the following BS directory, '../brainstorm3/toolbox/process/functions/'
 2. drag and drop trials responses to the processing window
-<!--- <img src="images/1_screenshot.png" width="500">
+<!-- <img src="images/1_screenshot.png" width="500"> -->
 
 3. Choosing DICS-BF source modelling
-<img src="images/2_screenshot.png" width="500">
+<!-- <img src="images/2_screenshot.png" width="500"> -->
 4. Pipline estimate time-frequncy resposnses,
-<img src="images/3_screenshot.png" width="300">
+<!-- <img src="images/3_screenshot.png" width="300"> -->
 5. Choosing the time intervals, post-vs-pre. suggestion is provided based on gloab power spression of induced resposnes.
-<img src="images/4_screenshot.png" width="500">
+<!-- <img src="images/4_screenshot.png" width="500"> -->
 6. Choosing the frequncy of intervals, post vs pre, a suggestion is provided based on gloab power spression of induced resposnes.
-<img src="images/5_screenshot.png" width="600">
-<img src="images/6_screenshot.png" width="600">
+<!-- <img src="images/5_screenshot.png" width="600"> -->
+<!-- <img src="images/6_screenshot.png" width="600"> -->
 <img src="images/7_screenshot.png" width="600">
