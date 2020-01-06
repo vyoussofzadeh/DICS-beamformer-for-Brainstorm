@@ -12,3 +12,9 @@ Below are details on how to run the DICS-BF under BS,
 <img src="images/2_screenshot.png" width="500">
 4. Pipline estimate time-frequncy resposnses,
 <img src="images/3_screenshot.png" width="300">
+5. Choosing the time intervals, post-vs-pre. suggestion is provided based on gloab power spression of induced resposnes.
+<img src="images/4_screenshot.png" width="500">
+6. Choosing the frequncy of intervals, post vs pre, a suggestion is provided based on gloab power spression of induced resposnes.
+<img src="images/5_screenshot.png" width="600">
+<img src="images/6_screenshot.png" width="600">
+<img src="images/7_screenshot.png" width="600">
