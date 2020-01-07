@@ -21,12 +21,12 @@ To run the DICS-BF in BS
 5. Choosing the time intervals, post-vs-pre. suggestion is provided based on gloab power spression of induced resposnes.<br/>
 6. Choosing the frequncy of intervals, post vs pre, a suggestion is provided based on gloab power spression of induced resposnes.<br/>
 7. Results are saved in the last trial.<br/>
+<p align="center">
+<img src="images/8_screenshot.png" width="300">
+</p>
 8. A sample comparison of DICS-BF against dSPM source model.<br/>
 <p align="center">
 <img src="images/7_screenshot.png" width="500">
-</p>
-<p align="center">
-<img src="images/8_screenshot.png" width="300">
 </p>
 
 # Sources
