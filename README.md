@@ -8,27 +8,25 @@ To run the DICS-BF in BS
 1. Add "process_ft_sourceanalysis_DICS_BF.m" to the following BS directory, '../brainstorm3/toolbox/process/functions/'
 2. drag and drop trials responses to the processing window
 <p align="center">
-<img src="images/1_screenshot.png" width="500">
+<img src="images/1_screenshot.png" width="400">
 </p>
 3. Select the DICS-BF source modelling from the process selection/Source/FieldTrrip: ft_souceanalysis DICS-BF vXX
 <p align="center">
-<img src="images/2_screenshot.png" width="500">
+<img src="images/2_screenshot.png" width="400">
 </p>
 4. Pipline estimate time-frequncy resposnses,
 <p align="center">
-<img src="images/3_screenshot.png" width="500">
+<img src="images/3_screenshot.png" width="400">
 </p>
-5. Choosing the time intervals, post-vs-pre. suggestion is provided based on gloab power spression of induced resposnes
-6. Choosing the frequncy of intervals, post vs pre, a suggestion is provided based on gloab power spression of induced resposnes
-7. Results are saved in the last trial,
-8. A sample comparison of DICS-BF against dSPM source model,
-
-
+5. Choosing the time intervals, post-vs-pre. suggestion is provided based on gloab power spression of induced resposnes.<br/>
+6. Choosing the frequncy of intervals, post vs pre, a suggestion is provided based on gloab power spression of induced resposnes.<br/>
+7. Results are saved in the last trial.<br/>
+8. A sample comparison of DICS-BF against dSPM source model.<br/>
 <p align="center">
-<img src="images/7_screenshot.png" width="600">
+<img src="images/7_screenshot.png" width="500">
 </p>
 <p align="center">
-<img src="images/8_screenshot.png" width="400">
+<img src="images/8_screenshot.png" width="300">
 </p>
 
 # Sources
