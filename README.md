@@ -7,16 +7,27 @@ This implementation has mainly focused on localizing induced activations due to 
 To run the DICS-BF in BS
 1. Add "process_ft_sourceanalysis_DICS_BF.m" to the following BS directory, '../brainstorm3/toolbox/process/functions/'
 2. drag and drop trials responses to the processing window
+<p align="center">
 <img src="images/1_screenshot.png" width="500">
-3. Select the DICS-BF source modelling from the process selection/Source/FieldTrrip: ft_souceanalysis DICS-BF vXX 
+</p>
+3. Select the DICS-BF source modelling from the process selection/Source/FieldTrrip: ft_souceanalysis DICS-BF vXX
+<p align="center">
 <img src="images/2_screenshot.png" width="500">
+</p>
 4. Pipline estimate time-frequncy resposnses,
-<img src="images/3_screenshot.png" width="300">
+<p align="center">
+<img src="images/3_screenshot.png" width="500">
+</p>
 5. Choosing the time intervals, post-vs-pre. suggestion is provided based on gloab power spression of induced resposnes.
 <!-- <img src="images/4_screenshot.png" width="500"> -->
 6. Choosing the frequncy of intervals, post vs pre, a suggestion is provided based on gloab power spression of induced resposnes.
 <!-- <img src="images/5_screenshot.png" width="600"> -->
 <!-- <img src="images/6_screenshot.png" width="600"> -->
+6. results are save in the last trial,
+<p align="center">
+<img src="images/8_screenshot.png" width="500">
+</p>
+7. A sample comparison of DICS-BF against dSPM source model,
 <p align="center">
 <img src="images/7_screenshot.png" width="600">
 </p>
