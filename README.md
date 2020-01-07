@@ -18,8 +18,8 @@ To run the DICS-BF in BS
 <p align="center">
 <img src="images/3_screenshot.png" width="500">
 </p>
-5. Choosing the time intervals, post-vs-pre. suggestion is provided based on gloab power spression of induced resposnes
-6. Choosing the frequncy of intervals, post vs pre, a suggestion is provided based on gloab power spression of induced resposnes eg, f=22Hz
+5. Choosing the time intervals, post-vs-pre. suggestion is provided based on gloab power spression of induced resposnes.
+6. Choosing the frequncy of intervals, post vs pre, a suggestion is provided based on gloab power spression of induced resposnes.
 7. results are save in the last trial,
 <p align="center">
 <img src="images/8_screenshot.png" width="400">
