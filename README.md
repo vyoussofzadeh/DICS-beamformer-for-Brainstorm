@@ -5,26 +5,27 @@ The dynamic imaging of coherent sources (DICS) beamformer technique that enables
 This implementation has mainly focused on localizing induced activations due to task-MEG responses, eg, an overt language experiment.
 
 To run the DICS-BF in BS,
-1. Add "process_ft_sourceanalysis_DICS_BF.m" to BS directory, '../brainstorm3/toolbox/process/functions/'
-2. Add trial responses to the processing window,<br/>
+1. Copy "process_ft_sourceanalysis_DICS_BF.m" to BS directory, '../brainstorm3/toolbox/process/functions/'
+2. open brainstorm
+3. Add (preprocessed epoched) trial responses to the processing window,<br/>
 <p align="center">
 <img src="images/1_screenshot.png" width="500">
 </p>
-3. Select the DICS-BF source modelling from the process selection/Source/FieldTrrip: ft_souceanalysis DICS-BF vXX <br/>
+4. Select the DICS-BF source modelling from the process selection/Source/FieldTrrip: ft_souceanalysis DICS-BF vXX <br/>
 <p align="center">
 <img src="images/2_screenshot.png" width="500">
 </p>
-4. Pipline estimates time-frequncy resposnses, <br/>
+5. Pipline estimates time-frequncy resposnses, <br/>
 <p align="center">
 <img src="images/3_screenshot.png" width="400">
 </p>
-5. Select the time interval of post-vs-pre responses, eg, [-0.3,0,0.7,1.2]<br/>
-6. Select the frequency of interest, e.g. f=22Hz<br/>
-7. Results are saved in the last trial.<br/>
+6. Select the time interval of post-vs-pre responses, eg, [-0.3,0,0.7,1.2]<br/>
+7. Select the frequency of interest, e.g. f=22Hz<br/>
+8. Results are saved in the last trial.<br/>
 <p align="center">
 <img src="images/8_screenshot.png" width="400">
 </p>
-8. A sample source findings based on DICS-BF against dSPM source model is provided below:<br/>
+9. A sample source findings based on DICS-BF against dSPM source model is provided below:<br/>
 <p align="center">
 <img src="images/7_screenshot.png" width="600">
 </p>
