@@ -17,7 +17,7 @@ To run the DICS-BF in BS,
 <p align="center">
 <img src="images/3_screenshot.png" width="400">
 </p>
-6. Select the time interval of post-vs-pre responses, eg, [-0.3,0,0.7,1.2]<br/>
+6. Select the time interval of post-vs-pre responses, eg, [-0.3,0;0.7,1.2]<br/>
 7. Select the frequency of interest, eg, f=22Hz<br/>
 8. Results are saved in the last trial.<br/>
 <p align="center">
