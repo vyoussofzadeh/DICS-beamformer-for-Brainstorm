@@ -6,7 +6,7 @@ This implementation has mainly focused on localizing induced activations due to 
 
 To run the DICS-BF in BS,
 1. Add "process_ft_sourceanalysis_DICS_BF.m" to BS directory, '../brainstorm3/toolbox/process/functions/'
-2. drag-and-drop trial responses to the processing window,<br/>
+2. Add trial responses to the processing window,<br/>
 <p align="center">
 <img src="images/1_screenshot.png" width="500">
 </p>
