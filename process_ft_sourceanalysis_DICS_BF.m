@@ -205,7 +205,7 @@ for iChanFile = 1:1%length(AllChannelFiles)
         %% step 5: Selecting freq of interest
         if exist(fullfile(savepath,'tfr.mat'),'file')~= 2
             
-            disp('Enter the highest freq in the data in Hz, e.g. 40:')
+            disp('Enter the highest freq in the data in Hz, eg, 40:')
             fmax = input(':');
             % do tfr-decomposition
             cfg = [];
@@ -252,7 +252,7 @@ for iChanFile = 1:1%length(AllChannelFiles)
         disp('OK to proceed: 1, No, another time interval: 2:');
         ask_time = input(':');
         if ask_time == 2
-            disp('Enter time interval in sec, e.g., [-0.3,0; 0.7,1.2];');
+            disp('Enter time interval in sec, eg, [-0.3,0; 0.7,1.2];');
             toi = input(':');
         end
         
@@ -285,13 +285,13 @@ for iChanFile = 1:1%length(AllChannelFiles)
         
         outputdir_dics = cfg_main.outputdir;
         if exist(outputdir_dics, 'file') == 0, mkdir(outputdir_dics), end
-             
+        
         f_sugg = round(cfg_main.freq_of_interest);
-        disp(['Suggested by TFR: ', num2str(f_sugg),'+-3Hz']);
-        disp('Select foi:')
+        disp(['Suggested by TFR: ', num2str(f_sugg),'(+-3Hz)']);
+        disp(['Select foi,eg ,',num2str(f_sugg),':']);
         clear('input')
         f = input('Freq of interest? ');
-        tapsmofrq = 4;        
+        tapsmofrq = 4;
         
         cfg = [];
         cfg.savefile = [];
@@ -309,12 +309,14 @@ for iChanFile = 1:1%length(AllChannelFiles)
         
         %% Step8: head (forward) model
         sourcemodel = ft_read_headshape(fullfile(bsanatdir,HeadModelMat.SurfaceFile));
-        [ftHeadmodel, ftLeadfield] = out_fieldtrip_headmodel(HeadModelMat, ChannelMat, iChannelsData, 1);        
+        [ftHeadmodel, ftLeadfield] = out_fieldtrip_headmodel(HeadModelMat, ChannelMat, iChannelsData, 1);
         
         %%
-        disp('Fast post-pre contrast: 1, slow cluster-based statistics: 2?');
-        st = input('');
-%         st = 1;
+%         disp('Simple post-pre contrasting (fast)         : 1');
+%         disp('Cluster-based permutation statistics (slow): 2');
+%         disp('?');
+%         st = input('');
+        st = 1;
         if st == 2, Method = 'dics_stat'; end
         
         %% step9: Source analysis
@@ -348,7 +350,7 @@ for iChanFile = 1:1%length(AllChannelFiles)
                 cfg.dics.fixedori    = 'yes'; % project on axis of most variance using SVD
                 cfg.headmodel = ftHeadmodel;
                 s_data.bsl      = ft_sourceanalysis(cfg, f_data.bsl);
-                s_data.pst      = ft_sourceanalysis(cfg, f_data.pst);                
+                s_data.pst      = ft_sourceanalysis(cfg, f_data.pst);
                 %                 disp('desynchronisation effects: 1, synchronisation effects: 2:');
                 %                 ask_sd = input(':');
                 ask_sd = 1;
@@ -372,7 +374,15 @@ for iChanFile = 1:1%length(AllChannelFiles)
                         source_diff_dics.pow(isnan(source_diff_dics.pow))=0;
                         source_diff_dics.pow(source_diff_dics.pow<0)=0;
                         source_diff_dics.pow = abs(source_diff_dics.pow);
-                end                
+                        
+                        
+%                         figure
+%                         m = source_diff_dics.pow;
+%                         bnd.pnt = sourcemodel.pos;
+%                         bnd.tri = sourcemodel.tri;
+%                         ft_plot_mesh(bnd, 'vertexcolor', abs(m));
+%                         colorbar
+                end
             case 'dics_stat'
                 
                 cfg = [];
@@ -406,7 +416,7 @@ for iChanFile = 1:1%length(AllChannelFiles)
                 stats1.mask = stat.inside;
                 stats2 = stats1;
                 stats2.stat(stats2.stat>0)=0;
-                stats2.stat(isnan(stats2.stat))=0;               
+                stats2.stat(isnan(stats2.stat))=0;
         end
         
         %% step10: saving ourput, surface/volume projection
@@ -421,7 +431,7 @@ for iChanFile = 1:1%length(AllChannelFiles)
         ResultsMat.ImagingKernel = [];
         switch Method
             case 'dics'
-                ResultsMat.ImageGridAmp  = abs((source_diff_dics.pow));
+                ResultsMat.ImageGridAmp  = abs((source_diff_dics.pow))+0.01;
                 ResultsMat.cfg           = source_diff_dics.cfg;
             case 'dics_stat'
                 ResultsMat.ImageGridAmp  = abs((stats2.stat));
@@ -550,7 +560,7 @@ xlabel('Time (s)');
 ylabel('Frequency (Hz)');
 clim = max(abs(meanpow(:)));
 caxis([-clim clim]);
-colormap(brewermap(256, '*RdYlBu'));
+% colormap(brewermap(256, '*RdYlBu'));
 hold on;
 plot(zeros(size(freq_interp)), freq_interp, 'k:');
 
