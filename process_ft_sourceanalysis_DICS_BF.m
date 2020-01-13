@@ -20,7 +20,7 @@ function varargout = process_ft_sourceanalysis_DICS_BF(varargin )
 % =============================================================================@
 %
 % Authors: Francois Tadel, 2016-2017
-% Vahab Youssof Zadeh, 2020-2021 % -- Adding DICS beamformer.
+% Vahab YoussofZadeh <vyoussofzadeh@mcw.edu>, 2020-2021 % -- Added DICS beamformer.
 
 eval(macro_method);
 end
