@@ -20,7 +20,7 @@ function varargout = process_ft_sourceanalysis_DICS_BF(varargin )
 % =============================================================================@
 %
 % Authors: Francois Tadel, 2016-2017
-% Vahab YoussofZadeh <vyoussofzadeh@mcw.edu>, 2020-2021 % -- Added DICS beamformer.
+% Vahab Youssof Zadeh, 2020-2021 % -- Adding DICS beamformer.
 
 eval(macro_method);
 end
@@ -190,8 +190,8 @@ for iChanFile = 1:1%length(AllChannelFiles)
         
         
         OutputDir = bst_fileparts(file_fullpath(DataFile));
-        Index = strfind(OutputDir, 'brainstorm_db');
-        bsdir = OutputDir(1:Index+13);
+        Index = strfind(OutputDir, 'data');
+        bsdir = OutputDir(1:Index-1);
         bsdatadir = fullfile(bsdir,'data');
         bsanatdir = fullfile(bsdir,'anat');
         cd(bsdir)
