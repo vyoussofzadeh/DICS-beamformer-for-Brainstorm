@@ -14,7 +14,7 @@ To run the DICS-BF in BS,
 <p align="center">
 <img src="images/2_screenshot.png" width="500">
 </p>
-4. Pipline estimate time-frequncy resposnses, <br/>
+4. Pipline estimates time-frequncy resposnses, <br/>
 <p align="center">
 <img src="images/3_screenshot.png" width="400">
 </p>
