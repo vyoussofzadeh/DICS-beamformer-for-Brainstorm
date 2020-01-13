@@ -2,7 +2,7 @@
 This is a DICS beamformer implementation for the Brainstorm (BS) software package.
 
 The dynamic imaging of coherent sources (DICS) beamformer technique that enables the study of cortical sources of oscillatory activation in frequency-domain (Gross et al., 2001). DICS is a linearly constrained minimum variance beamformer in the frequency domain. It estimates the covariance matrix to calculate the spatial filter using the sensor-level cross-spectral density (CSD) matrix and applies the filter to the sensor-level CSD to reconstruct the source-level CSDs of pairwise voxel activations, and this provides coherence measures between the source pairs.
-This implementation has mainly focused on localizing induced activations due to task-MEG responses, eg, an overt language experient.
+This implementation has mainly focused on localizing induced activations due to task-MEG responses, eg, an overt language experiment.
 
 To run the DICS-BF in BS,
 1. Add "process_ft_sourceanalysis_DICS_BF.m" to BS directory, '../brainstorm3/toolbox/process/functions/'
@@ -18,13 +18,13 @@ To run the DICS-BF in BS,
 <p align="center">
 <img src="images/3_screenshot.png" width="400">
 </p>
-5. Choosing the time intervals, post-vs-pre. suggestion is provided based on gloab power spression of induced resposnes, select e.g. [-0.3,0,0.7,1.2]<br/>
-6. Choosing the frequncy of intervals, post vs pre, a suggestion is provided based on gloab power spression of induced resposnes. Select e.g. f=22Hz<br/>
+5. Select the time interval of post-vs-pre responses, eg, [-0.3,0,0.7,1.2]<br/>
+6. Select the frequency of interest, e.g. f=22Hz<br/>
 7. Results are saved in the last trial.<br/>
 <p align="center">
 <img src="images/8_screenshot.png" width="400">
 </p>
-8. A sample comparison of DICS-BF against dSPM source model.<br/>
+8. A sample source findings based on DICS-BF against dSPM source model is provided below.<br/>
 <p align="center">
 <img src="images/7_screenshot.png" width="600">
 </p>
