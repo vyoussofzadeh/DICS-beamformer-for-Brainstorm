@@ -23,7 +23,7 @@ To run the DICS-BF in BS,
 <p align="center">
 <img src="images/8_screenshot.png" width="400">
 </p>
-9. A sample source findings based on DICS-BF against dSPM source model is provided below:<br/>
+9. A sample result (an auditory definition naming task) based on DICS-BF against dSPM source model is provided below:<br/>
 <p align="center">
 <img src="images/7_screenshot.png" width="600">
 </p>
