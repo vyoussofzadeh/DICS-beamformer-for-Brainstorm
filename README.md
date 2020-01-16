@@ -14,7 +14,7 @@ To run the DICS-BF in BS,
 <p align="center">
 <img src="images/2_screenshot.png" width="500">
 </p>
-5. Pipline estimates time-frequncy resposnses, <br/>
+5. Pipline estimates time-frequncy resposnses (sensor-space, average across all sensors), <br/>
 <p align="center">
 <img src="images/3_screenshot.png" width="400">
 </p>
