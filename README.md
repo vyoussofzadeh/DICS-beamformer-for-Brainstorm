@@ -33,7 +33,7 @@ To run the DICS-BF in BS,
 <p align="center">
 <img src="images/8_screenshot.png" width="400">
 </p>
-10. A sample result (an auditory definition naming task) based on DICS-BF (22+-4Hz) against a dynamic statistical parametric maps (dSPM) source estimates of evoked responses (broadband):<br/>
+10. A sample result, an auditory definition naming task, DICS-BF vs a dynamic statistical parametric maps (dSPM), broadband 0.1-28Hz:<br/>
 <p align="center">
 <img src="images/7_screenshot.png" width="600">
 </p>
