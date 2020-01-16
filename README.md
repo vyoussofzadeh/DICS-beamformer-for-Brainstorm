@@ -5,8 +5,8 @@ This implementation has mainly focused on localizing induced activations due to 
 
 Before running,
 - Add Fieldtrip toolbox to the Matlab path, eg, ft_path = 'xx/fieldtrip_20190419'; addpath(ft_path); ft_defaults;
-- Estimate headmodel: overlapping sphares for surface-based and MRI volume for volumetric-based source mapping;
-- Estimate noise co-varinace form trial responses: pipilne needs these details for initial settings only.
+- Estimate headmodel: overlapping spheres for surface-based and MRI volume for volumetric-based source mapping;
+- Estimate noise co-variance form trial responses: pipeline needs these details for initial settings only.
 
 To run the DICS-BF in BS,
 1. Copy "process_ft_sourceanalysis_DICS_BF.m" to BS directory, '../brainstorm3/toolbox/process/functions/'
@@ -15,15 +15,15 @@ To run the DICS-BF in BS,
 <p align="center">
 <img src="images/1_screenshot.png" width="500">
 </p>
-4. Select the DICS-BF source modelling from the process selection/Source/FieldTrrip: ft_souceanalysis DICS-BF, vXX, and Run, <br/>
+4. Select the DICS-BF source modeling from the process selection/Source/FieldTrrip: ft_souceanalysis DICS-BF, vXX, and Run, <br/>
 <p align="center">
 <img src="images/2_screenshot.png" width="500">
 </p>
-5. Choose DICS-beamformer as the source modelling approach, and MEG (MEG-MAG, or MEG GRAD) as the sensor type, 
+5. Choose DICS-beamformer as the source modeling approach, and MEG (MEG-MAG, or MEG GRAD) as the sensor type, 
 <p align="center">
 <img src="images/9_screenshot.png" width="400">
 </p>
-6. Pipline estimates time-frequncy resposnses (sensor-space, average across all sensors), <br/>
+6. Pipeline estimates time-frequency responses (sensor-space, average across all sensors), <br/>
 <p align="center">
 <img src="images/3_screenshot.png" width="400">
 </p>
