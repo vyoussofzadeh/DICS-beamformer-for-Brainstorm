@@ -10,7 +10,7 @@ To run the DICS-BF in BS,
 <p align="center">
 <img src="images/1_screenshot.png" width="500">
 </p>
-4. Select the DICS-BF source modelling from the process selection/Source/FieldTrrip: ft_souceanalysis DICS-BF, vXX, and Run <br/>
+4. Select the DICS-BF source modelling from the process selection/Source/FieldTrrip: ft_souceanalysis DICS-BF, vXX, and Run, <br/>
 <p align="center">
 <img src="images/2_screenshot.png" width="500">
 </p>
