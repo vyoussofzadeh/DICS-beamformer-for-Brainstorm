@@ -14,17 +14,21 @@ To run the DICS-BF in BS,
 <p align="center">
 <img src="images/2_screenshot.png" width="500">
 </p>
-5. Pipline estimates time-frequncy resposnses (sensor-space, average across all sensors), <br/>
+5. Choose DICS beamformer as source model, MEG (or MEG MAG, or MEG GRAD) as sensor type, 
+<p align="center">
+<img src="images/9_screenshot.png" width="400">
+</p>
+6. Pipline estimates time-frequncy resposnses (sensor-space, average across all sensors), <br/>
 <p align="center">
 <img src="images/3_screenshot.png" width="400">
 </p>
-6. Select the time interval of post-vs-pre responses, eg, [-0.3,0;0.7,1.2]<br/>
-7. Select the frequency of interest, eg, f=22Hz; A dpss smoothing window of 4Hz is applied (by default, see vy_fft, line 656) to estimate cross-spectral density (CSD) matrix<br/>
-8. Results after saving can be viewed in the last trial response.<br/>
+7. Select the time interval of post-vs-pre responses, eg, [-0.3,0;0.7,1.2]<br/>
+8. Select the frequency of interest, eg, f=22Hz; A dpss smoothing window of 4Hz is applied (by default, see vy_fft, line 656) to estimate cross-spectral density (CSD) matrix<br/>
+9. Results after saving can be viewed in the last trial response.<br/>
 <p align="center">
 <img src="images/8_screenshot.png" width="400">
 </p>
-9. A sample result (an auditory definition naming task) based on DICS-BF against dSPM source model is provided below:<br/>
+10. A sample result (an auditory definition naming task) based on DICS-BF against dSPM source model is provided below:<br/>
 <p align="center">
 <img src="images/7_screenshot.png" width="600">
 </p>
