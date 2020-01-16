@@ -3,6 +3,11 @@ This is a DICS beamformer implementation for the Brainstorm (BS) software packag
 
 This implementation has mainly focused on localizing induced activations due to task-MEG responses, eg, an overt definition naming language experiment.
 
+Before running,
+- Add Fieldtrip toolbox to the Matlab path, eg, ft_path = 'xx/fieldtrip_20190419'; addpath(ft_path); ft_defaults;
+- Estimate headmodel: overlapping sphares for surface-based and MRI volume for volumetric-based source mapping;
+- Estimate noise co-varinace form trial responses: pipilne needs these details for initial settings only.
+
 To run the DICS-BF in BS,
 1. Copy "process_ft_sourceanalysis_DICS_BF.m" to BS directory, '../brainstorm3/toolbox/process/functions/'
 2. Open Brainstorm
@@ -24,7 +29,7 @@ To run the DICS-BF in BS,
 </p>
 7. Select the time interval of post-vs-pre responses, eg, [-0.3,0;0.7,1.2]<br/>
 8. Select the frequency of interest, eg, f=22Hz; A dpss smoothing window of 4Hz is applied (by default, see vy_fft, line 656) to estimate cross-spectral density (CSD) matrix<br/>
-9. Results after saving can be viewed in the last trial response.<br/>
+9. Results (surface map) are stored in the last trial response.<br/>
 <p align="center">
 <img src="images/8_screenshot.png" width="400">
 </p>
