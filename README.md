@@ -14,7 +14,7 @@ To run the DICS-BF in BS,
 <p align="center">
 <img src="images/2_screenshot.png" width="500">
 </p>
-5. Choose DICS beamformer as source model, MEG (or MEG MAG, or MEG GRAD) as sensor type, 
+5. Choose DICS-beamformer as the source modelling approach, and MEG (MEG-MAG, or MEG GRAD) as the sensor type, 
 <p align="center">
 <img src="images/9_screenshot.png" width="400">
 </p>
