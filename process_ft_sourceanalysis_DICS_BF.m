@@ -29,7 +29,7 @@ end
 function sProcess = GetDescription() %#ok<DEFNU>
 % ===== PROCESS =====
 % Description the process
-sProcess.Comment     = 'FieldTrip: ft_sourceanalysis DICS-BF v010620';
+sProcess.Comment     = 'FieldTrip: ft_sourceanalysis DICS-BF v012320';
 sProcess.Category    = 'Custom';
 sProcess.SubGroup    = 'Sources';
 sProcess.Index       = 356;
