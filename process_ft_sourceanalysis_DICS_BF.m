@@ -190,7 +190,7 @@ for iChanFile = 1:1%length(AllChannelFiles)
         
         
         OutputDir = bst_fileparts(file_fullpath(DataFile));
-        Index = strfind(OutputDir, 'data');
+        Index = strfind(OutputDir, 'data/');
         bsdir = OutputDir(1:Index(end)-1);
         bsdatadir = fullfile(bsdir,'data');
         bsanatdir = fullfile(bsdir,'anat');
