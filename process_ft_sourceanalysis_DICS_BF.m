@@ -29,7 +29,7 @@ end
 function sProcess = GetDescription() %#ok<DEFNU>
 % ===== PROCESS =====
 % Description the process
-sProcess.Comment     = 'FieldTrip: ft_sourceanalysis DICS-BF v012320';
+sProcess.Comment     = 'FieldTrip: ft_sourceanalysis DICS-BF v051920';
 sProcess.Category    = 'Custom';
 sProcess.SubGroup    = 'Sources';
 sProcess.Index       = 356;
@@ -249,7 +249,7 @@ for iChanFile = 1:1%length(AllChannelFiles)
         %         disp(['[',num2str(toi(2,1)),',',num2str(toi(2,2)),'] sec interval was selected as post-stim']);
         %         disp('===========================================');
         warning(['Maximum trial length:[', num2str(datain.time{1}(1)), ',', num2str(datain.time{1}(end)),']']);
-        disp('OK to proceed: 1, No, another time interval: 2:');
+        disp('OK to proceed: 1, No, another time interval: 2');
         ask_time = input(':');
         if ask_time == 2
             disp('Enter time interval in sec, eg, [-0.3,0; 0.7,1.2];');
@@ -291,7 +291,8 @@ for iChanFile = 1:1%length(AllChannelFiles)
         disp(['Select foi,eg ,',num2str(f_sugg),':']);
         clear('input')
         f = input('Freq of interest? ');
-        tapsmofrq = 4;
+%         tapsmofrq = 4;
+        tapsmofrq = input('tapsmofrq, e.g. 4 Hz? '); 
         
         cfg = [];
         cfg.savefile = [];
@@ -310,13 +311,13 @@ for iChanFile = 1:1%length(AllChannelFiles)
         %% Step8: head (forward) model
         sourcemodel = ft_read_headshape(fullfile(bsanatdir,HeadModelMat.SurfaceFile));
         [ftHeadmodel, ftLeadfield] = out_fieldtrip_headmodel(HeadModelMat, ChannelMat, iChannelsData, 1);
-        
+         
         %%
-%         disp('Simple post-pre contrasting (fast)         : 1');
-%         disp('Cluster-based permutation statistics (slow): 2');
-%         disp('?');
-%         st = input('');
-        st = 1;
+        disp('Simple post-pre contrasting (fast)         : 1');
+        disp('Cluster-based permutation statistics (slow): 2');
+        disp('?');
+        st = input('');
+%         st = 1;
         if st == 2, Method = 'dics_stat'; end
         
         %% step9: Source analysis
@@ -331,6 +332,25 @@ for iChanFile = 1:1%length(AllChannelFiles)
                 Time = [DataMat.Time(1), DataMat.Time(2)];
                 
             case 'dics'
+                
+%                 % pre-whitenning paramer, kappa
+%                 indata = f_data.bsl;
+%                 [u,s,v] = svd(indata.fourierspctrm);
+%                 figure;plot(log10(diag(s)),'o');
+%                 
+%                 [~,s,~] = svd(f_data.bsl.fourierspctrm);
+%                 d       = -diff(log10(diag(s)));
+%                 d       = d./std(d);
+%                 kappa_bsl   = find(d>5,1,'first');
+%                 
+%                 [~,s,~] = svd(f_data.pst.fourierspctrm);
+%                 d       = -diff(log10(diag(s)));
+%                 d       = d./std(d);
+%                 kappa_pst   = find(d>5,1,'first');
+%                 figure;plot(log10(diag(s)),'o');
+%                 
+%                 kappa = min(kappa_pst,kappa_bsl);
+                
                 %- FFT_based
                 cfg = [];
                 cfg.method = 'dics';
@@ -375,7 +395,7 @@ for iChanFile = 1:1%length(AllChannelFiles)
                         source_diff_dics.pow(source_diff_dics.pow<0)=0;
                         source_diff_dics.pow = abs(source_diff_dics.pow);
                         
-                        
+%                         
 %                         figure
 %                         m = source_diff_dics.pow;
 %                         bnd.pnt = sourcemodel.pos;
