@@ -43,6 +43,9 @@ For further inquiries please contact, vyoussofzadeh@mcw.edu
 # Sources
 1. Gross J, Kujala J, Hamalainen M, Timmermann L, Schnitzler A, Salmelin R. Dynamic imaging of coherent sources: Studying neural interactions in the human brain. Proc Natl Acad Sci U S A. 2001;98(2):694–9.
 
+# cite
+1. Youssofzadeh, V., Stout, J., Ustine, C., Gross, W.L., Lisa, L., Humphries, C.J., Binder, J.R., Raghavan, M., 2020. Mapping language from MEG beta power modulations during auditory and visual naming, NeuroImage. Elsevier Inc. https://doi.org/10.1016/j.neuroimage.2020.117090
+
 <!-- <img src="images/4_screenshot.png" width="500"> -->
 <!-- <img src="images/5_screenshot.png" width="600"> -->
 <!-- <img src="images/6_screenshot.png" width="600"> -->
