@@ -291,8 +291,8 @@ for iChanFile = 1:1%length(AllChannelFiles)
         disp(['Select foi,eg ,',num2str(f_sugg),':']);
         clear('input')
         f = input('Freq of interest? ');
-%         tapsmofrq = 4;
-        tapsmofrq = input('tapsmofrq, e.g. 4 Hz? '); 
+        tapsmofrq = 4;
+%         tapsmofrq = input('tapsmofrq, e.g. 4 Hz? '); 
         
         cfg = [];
         cfg.savefile = [];
