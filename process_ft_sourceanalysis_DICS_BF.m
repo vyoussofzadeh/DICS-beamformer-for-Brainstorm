@@ -287,7 +287,7 @@ for iChanFile = 1:1%length(AllChannelFiles)
         if exist(outputdir_dics, 'file') == 0, mkdir(outputdir_dics), end
         
         f_sugg = round(cfg_main.freq_of_interest);
-        disp(['Suggested by TFR: ', num2str(f_sugg),'(+-3Hz)']);
+        disp(['Suggested by TFR: ', num2str(f_sugg),'(+-4Hz)']);
         disp(['Select foi,eg ,',num2str(f_sugg),':']);
         clear('input')
         f = input('Freq of interest? ');
