@@ -177,7 +177,7 @@ for iChanFile = 1:1%length(AllChannelFiles)
         ftData1.trial = trl;
         ftData1.time = timee;
         
-        %% step3, headmodel & leadfields ..
+        %% step3, head model & lead fields computation
         [sStudyChan, ~] = bst_get('ChannelFile', AllChannelFiles{iChanFile});
         % Load head model
         HeadModelFile = sStudyChan.HeadModel(sStudyChan.iHeadModel).FileName;
@@ -371,12 +371,12 @@ for iChanFile = 1:1%length(AllChannelFiles)
                 cfg.headmodel = ftHeadmodel;
                 s_data.bsl      = ft_sourceanalysis(cfg, f_data.bsl);
                 s_data.pst      = ft_sourceanalysis(cfg, f_data.pst);
-                %                 disp('desynchronisation effects: 1, synchronisation effects: 2:');
+                %                 disp('desynchronization effects: 1, synchronization effects: 2:');
                 %                 ask_sd = input(':');
                 ask_sd = 1;
                 
                 switch ask_sd
-                    case 1
+                    case 1 % Power decrement effects
                         %
                         cfg = [];
                         cfg.parameter = 'pow';
@@ -386,7 +386,7 @@ for iChanFile = 1:1%length(AllChannelFiles)
                         source_diff_dics.pow(source_diff_dics.pow>0)=0;
                         source_diff_dics.pow = abs(source_diff_dics.pow);
                         
-                    case 2
+                    case 2 % Power increase effects
                         cfg = [];
                         cfg.parameter = 'pow';
                         cfg.operation = 'log10(x1/x2)'; % sourceA divided by sourceB
