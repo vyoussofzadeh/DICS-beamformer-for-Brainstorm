@@ -439,7 +439,7 @@ for iChanFile = 1:1%length(AllChannelFiles)
                 stats2.stat(isnan(stats2.stat))=0;
         end
         
-        %% step10: saving ourput, surface/volume projection
+        %% step10: saving output, surface/volume projection
         % Call FieldTrip function
         %             ftSource = ft_sourceanalysis(cfg, ftData);
         
