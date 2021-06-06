@@ -48,7 +48,7 @@ For further inquiries please contact, vyoussofzadeh@mcw.edu
 - The pipeline by default investigates the desynchrony effects (power suppression effects, active < baseline). You might be interested in synchrony effects (active > baseline). If so, you can uncomment lines 374-375 and comment out line 376 to have an option for both analyses. 
 
 # Updates
-- a new version of the pipeline was added to repository, process_ft_dics.m.
+- a new version of the pipeline was added to repository, process_ft_dics.m. [process_ft_dics.m](https://github.com/vyoussofzadeh/DICS-beamformer-for-Brainstorm/blob/master/process_ft_dics.m)
 
 <!-- <img src="images/4_screenshot.png" width="500"> -->
 <!-- <img src="images/5_screenshot.png" width="600"> -->
