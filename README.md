@@ -45,7 +45,7 @@ For further inquiries please contact, vyoussofzadeh@mcw.edu
 2. Youssofzadeh, V., Stout, J., Ustine, C., Gross, W.L., Lisa, L., Humphries, C.J., Binder, J.R., Raghavan, M., 2020. Mapping language from MEG beta power modulations during auditory and visual naming, NeuroImage. Elsevier Inc. https://doi.org/10.1016/j.neuroimage.2020.117090
 
 # Notes
-- The pipeline by default investigates the desynchrony effects (power suppression effects, active < baseline). You might be interested in synchrony effects (active > baseline). If so, you can uncomment lines 374-375 and comment out line 376 to have an option for both analyses. 
+- The pipeline by default investigates the desynchrony effects (power suppression effects, active < baseline). You might be interested in synchrony effects (active > baseline). If so, please uncomment lines 374-375 and comment out line 376 to have an option for both analyses. 
 
 # Updates
 - On 06/0621, a new version of the pipeline [process_ft_dics.m](https://github.com/vyoussofzadeh/DICS-beamformer-for-Brainstorm/blob/master/process_ft_dics.m) was added to the repository. For convenience, variable inputs were integrated into a BS option GUI interface. The [process_ft_sourceanalysis_DICS_BF.m](https://github.com/vyoussofzadeh/DICS-beamformer-for-Brainstorm/blob/master/process_ft_sourceanalysis_DICS_BF.m) should produce the same results as the new version.
