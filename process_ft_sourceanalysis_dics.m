@@ -1,4 +1,4 @@
-function varargout = ft_sourceanalysis_dics(varargin )
+function varargout = process_ft_sourceanalysis_dics(varargin )
 % PROCESS_FT_SOURCEANALYSIS Call FieldTrip function ft_sourceanalysis
 
 % @=============================================================================
@@ -20,7 +20,7 @@ function varargout = ft_sourceanalysis_dics(varargin )
 % =============================================================================@
 %
 % Authors: Francois Tadel, 2016-2017
-% Vahab Youssof Zadeh, 2020-2021 % -- Adding DICS beamformer.
+% Vahab YoussofZadeh, 2021-2022 % -- Adding DICS beamformer.
 
 eval(macro_method);
 end
@@ -31,7 +31,7 @@ function sProcess = GetDescription() %#ok<DEFNU>
 % ===== PROCESS =====
 
 % Description the process
-sProcess.Comment     = 'FieldTrip: ft_sourceanalysis_test DICS-BF GUI2';
+sProcess.Comment     = 'FieldTrip: process_ft_sourceanalysis_dics';
 sProcess.Category    = 'Custom';
 sProcess.SubGroup    = 'Sources';
 sProcess.Index       = 356;
@@ -42,10 +42,6 @@ sProcess.InputTypes  = {'data'};
 sProcess.OutputTypes = {'data'};
 sProcess.nInputs     = 1;
 sProcess.nMinFiles   = 1;
-
-% Label: Warning
-% sProcess.options.label1.Comment = '<B>Warning</B>: this is test, process under development.<BR><BR>';
-% sProcess.options.label1.Type    = 'label';
 
 % Option: Inverse method
 sProcess.options.method.Comment = 'Inverse method:';
@@ -61,35 +57,34 @@ sProcess.options.sensortype.Value   = {'MEG', {'MEG', 'MEG GRAD', 'MEG MAG', 'EE
 sProcess.options.label1.Comment = '<BR><B> Time of interset:</B>';
 sProcess.options.label1.Type    = 'label';
 
-% Baseline time window
+% Active time window
 sProcess.options.poststim.Comment = 'Active (post-stim):';
 sProcess.options.poststim.Type    = 'poststim';
 sProcess.options.poststim.Value   = [];
 
-% Options: Max frequncy
 % Baseline time window
 sProcess.options.baseline.Comment = 'Baseline (pre-stim):';
 sProcess.options.baseline.Type    = 'baseline';
 sProcess.options.baseline.Value   = [];
 
-
-sProcess.options.label2.Comment = '<BR><B> Freq. of interset (20+-4 Hz):</B>';
+% Freq. of interset
+sProcess.options.label2.Comment = '<BR><B> Freq. of interset:</B>';
 sProcess.options.label2.Type    = 'label';
 
 % Enter the FOI in the data in Hz, eg, 22:
 sProcess.options.FOI.Comment = 'FOI:';
 sProcess.options.FOI.Type    = 'value';
-sProcess.options.FOI.Value   = {0,'Hz ',18};
+sProcess.options.FOI.Value   = {18,'Hz ',0};
 
 % Enter the Tappering frequnecy in the data in Hz, eg, 4:
 sProcess.options.tpr.Comment = 'Tappering freq.:';
 sProcess.options.tpr.Type    = 'value';
-sProcess.options.tpr.Value   = {0,'Hz ',4};
-
+sProcess.options.tpr.Value   = {4,'Hz ',0};
 
 sProcess.options.label4.Comment = '<BR><B> Contrasting analysis:</B>'; % Contrast between pre and post, across trials
 sProcess.options.label4.Type    = 'label';
 
+% Contrasting
 sProcess.options.cntrst.Comment = {'Subtraction (post-pre)', 'Permutation-stats (post-vs-pre)', 'Contrasting:'; ...
     'subtraction', 'permutation', ''};
 sProcess.options.cntrst.Type    = 'radio_linelabel';
@@ -106,7 +101,6 @@ sProcess.options.effect.Comment = {'abs', 'raw', 'Abosulte/raw value of the cont
 sProcess.options.effect.Type    = 'radio_linelabel';
 sProcess.options.effect.Value   = 'strict';
 
-
 % TFR
 sProcess.options.label3.Comment = '<BR><B> Time-freq response (its only for data inspection):</B>';
 sProcess.options.label3.Type    = 'label';
@@ -116,10 +110,9 @@ sProcess.options.otfr.Comment = {'yes', 'no (existing)', 'Overwrite TFR:'; ...
 sProcess.options.otfr.Type    = 'radio_linelabel';
 sProcess.options.otfr.Value   = 'strict';
 
-% Enter the highest freq in the data in Hz, eg, 40:
 sProcess.options.maxfreq.Comment = 'Max frequnecy (for TFR calulation):';
 sProcess.options.maxfreq.Type    = 'value';
-sProcess.options.maxfreq.Value   = {0,'Hz ',40};
+sProcess.options.maxfreq.Value   = {40,'Hz ',0};
 
 end
 
@@ -138,7 +131,6 @@ h = get(0,'Children');
 close(h)
 
 %%
-
 % ===== GET OPTIONS =====
 % Inverse options
 Method   = sProcess.options.method.Value{1};
@@ -257,7 +249,6 @@ NoiseCovMat = load(file_fullpath(NoiseCovFile));
 Index = strfind(HeadModelMat.SurfaceFile, '/'); if isempty(Index), Index = strfind(HeadModelMat.SurfaceFile, '\');end
 subj = HeadModelMat.SurfaceFile(1:Index(1)-1);
 
-
 OutputDir = bst_fileparts(file_fullpath(DataFile));
 Index = strfind(OutputDir, 'data/'); if isempty(Index), Index = strfind(OutputDir, 'data\'); end
 bsdir = OutputDir(1:Index(end)-1);
@@ -364,7 +355,6 @@ if f < 4, cfg.tapsmofrq  = 1; cfg.taper    = 'hanning'; end
 [f_data.app,~,~,~] = do_fft(cfg, ep_data.app); f_data.app.elec = cfg_main.sens;
 f_data.bsl = do_fft(cfg, ep_data.bsl); f_data.bsl.elec = cfg_main.sens;
 f_data.pst = do_fft(cfg, ep_data.pst); f_data.pst.elec = cfg_main.sens;
-
 
 %% Step 8: head (forward) model
 %         sourcemodel = ft_read_headshape(fullfile(bsanatdir,HeadModelMat.SurfaceFile));
@@ -671,7 +661,7 @@ plot([freq_of_interest freq_of_interest], [0 clim],...
 
 %%
 cfg = [];
-cfg.baseline = [-0.3 0];
+cfg.baseline = cfg_main.baselinetime;
 cfg.baselinetype = 'absolute';
 freq_bsl = ft_freqbaseline(cfg, tfr);
 
