@@ -49,7 +49,7 @@ For further inquiries please contact, vyoussofzadeh@mcw.edu
 
 # Updates
 - On 07/01/21, a new update was made. Script was reformatted to match the standards in Brainstorm.
-- On 06/0621, a new version of the pipeline [process_ft_sourceanalysis_dics.m](https://github.com/vyoussofzadeh/DICS-beamformer-for-Brainstorm/blob/master/process_ft_sourceanalysis_dics.m) was added to the repository. For convenience and compatibility, variable inputs were integrated into a BS option GUI interface. The new version should produce the same results as the old version [process_ft_sourceanalysis_DICS_BF.m](https://github.com/vyoussofzadeh/DICS-beamformer-for-Brainstorm/blob/master/Older%20version/process_ft_sourceanalysis_DICS_BF.m).
+- On 06/06/21, a new version of the pipeline [process_ft_sourceanalysis_dics.m](https://github.com/vyoussofzadeh/DICS-beamformer-for-Brainstorm/blob/master/process_ft_sourceanalysis_dics.m) was added to the repository. For convenience and compatibility, variable inputs were integrated into a BS option GUI interface. The new version should produce the same results as the old version [process_ft_sourceanalysis_DICS_BF.m](https://github.com/vyoussofzadeh/DICS-beamformer-for-Brainstorm/blob/master/Older%20version/process_ft_sourceanalysis_DICS_BF.m).
    
 
 <!-- <img src="images/4_screenshot.png" width="500"> -->
