@@ -49,7 +49,7 @@ For further inquiries please contact, vyoussofzadeh@mcw.edu
 
 # Updates
 - 07/08/21, A new tutorial wiki BS page has created (soon to be completed): https://neuroimage.usc.edu/brainstorm/Tutorials/DICS
-- 07/08/21, Piplline is now officially part of the BS toolbox: https://github.com/brainstorm-tools/brainstorm3/blob/master/toolbox/process/functions/process_ft_sourceanalysis_dics.m
+- 07/08/21, Pipeline was officially to BS: https://github.com/brainstorm-tools/brainstorm3/blob/master/toolbox/process/functions/process_ft_sourceanalysis_dics.m
 - 07/01/21, a new update was made. Script was reformatted to match the standards in Brainstorm.
 - 06/06/21, a new version of the pipeline [process_ft_sourceanalysis_dics.m](https://github.com/vyoussofzadeh/DICS-beamformer-for-Brainstorm/blob/master/process_ft_sourceanalysis_dics.m) was added to the repository. For convenience and compatibility, variable inputs were integrated into a BS option GUI interface. The new version should produce the same results as the old version [process_ft_sourceanalysis_DICS_BF.m](https://github.com/vyoussofzadeh/DICS-beamformer-for-Brainstorm/blob/master/Older%20version/process_ft_sourceanalysis_DICS_BF.m).
    
