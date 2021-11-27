@@ -30,7 +30,7 @@ function sProcess = GetDescription() %#ok<DEFNU>
     sProcess.Comment     = 'FieldTrip: ft_sourceanalysis (DICS)';
     sProcess.Category    = 'Custom';
     sProcess.SubGroup    = 'Sources';
-    sProcess.Index       = 357;
+    sProcess.Index       = 357; 
     sProcess.Description = 'https://github.com/vyoussofzadeh/DICS-beamformer-for-Brainstorm';
     % Definition of the input accepted by this process
     sProcess.InputTypes  = {'data'};
