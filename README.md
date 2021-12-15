@@ -8,31 +8,30 @@ Before running,
 - Estimate headmodel: overlapping spheres for surface-based and MRI volume for volumetric-based source mapping;
 
 To run the DICS-BF in BS,
-1. Copy "process_ft_sourceanalysis_DICS_BF.m" to BS directory, '../brainstorm3/toolbox/process/functions/'
-2. Open Brainstorm
-3. Add (preprocessed epoched) trial responses to the processing window,<br/>
+1. Open Brainstorm
+2. Add (preprocessed epoched) trial responses to the processing window,<br/>
 <p align="center">
 <img src="images/1_screenshot.png" width="500">
 </p>
-4. Select the DICS-BF source modeling from the process selection/Source/FieldTrrip: ft_souceanalysis DICS-BF, vXX, and Run, <br/>
+3. Select the DICS-BF source modeling from the process selection/Source/FieldTrrip: ft_souceanalysis DICS-BF, vXX, and Run, <br/>
 <p align="center">
 <img src="images/2_screenshot.png" width="500">
 </p>
-5. Choose DICS-beamformer as the source modeling approach, and MEG (MEG-MAG, or MEG GRAD) as the sensor type, 
+4. Choose DICS-beamformer as the source modeling approach, and MEG (MEG-MAG, or MEG GRAD) as the sensor type, 
 <p align="center">
 <img src="images/9_screenshot.png" width="400">
 </p>
-6. Pipeline estimates time-frequency responses (sensor-space, average across all sensors), <br/>
+5. Pipeline estimates time-frequency responses (sensor-space, average across all sensors), <br/>
 <p align="center">
 <img src="images/3_screenshot.png" width="400">
 </p>
-7. Select the time interval of post-vs-pre responses, eg, [-0.3,0;0.7,1.2]<br/>
-8. Select the frequency of interest, eg, f=22Hz; A dpss smoothing window of 4Hz is applied (by default, see vy_fft, line 656) to estimate cross-spectral density (CSD) matrix<br/>
-9. Results (surface map) are stored in the last trial response.<br/>
+6. Select the time interval of post-vs-pre responses, eg, [-0.3,0;0.7,1.2]<br/>
+7. Select the frequency of interest, eg, f=22Hz; A dpss smoothing window of 4Hz is applied (by default, see vy_fft, line 656) to estimate cross-spectral density (CSD) matrix<br/>
+8. Results (surface map) are stored in the last trial response.<br/>
 <p align="center">
 <img src="images/8_screenshot.png" width="400">
 </p>
-10. A sample result, an auditory definition naming task, DICS-BF compared against a dynamic Statistical Parametric Maps (dSPM), broadband 0.1-28Hz, is provided below. <br/>
+9. A sample result, an auditory definition naming task, DICS-BF compared against a dynamic Statistical Parametric Maps (dSPM), broadband 0.1-28Hz, is provided below. <br/>
 <p align="center">
 <img src="images/7_screenshot.png" width="600">
 </p>
