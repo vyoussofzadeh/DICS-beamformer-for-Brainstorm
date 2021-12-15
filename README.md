@@ -44,9 +44,6 @@ For further inquiries please contact, vyoussofzadeh@mcw.edu
 1. Gross J, Kujala J, Hamalainen M, Timmermann L, Schnitzler A, Salmelin R. Dynamic imaging of coherent sources: Studying neural interactions in the human brain. Proc Natl Acad Sci U S A. 2001;98(2):694–9.
 2. Youssofzadeh, V., Stout, J., Ustine, C., Gross, W.L., Lisa, L., Humphries, C.J., Binder, J.R., Raghavan, M., 2020. Mapping language from MEG beta power modulations during auditory and visual naming, NeuroImage. Elsevier Inc. https://doi.org/10.1016/j.neuroimage.2020.117090
 
-# Notes
-- The pipeline by default investigates the desynchrony effects (power suppression effects, active < baseline). You might be interested in synchrony effects (active > baseline). If so, please uncomment lines 374-375 and comment out line 376 to have an option for both analyses. 
-
 # Updates
 - 07/08/21, A new tutorial wiki BS page was created: https://neuroimage.usc.edu/brainstorm/Tutorials/DICS
 - 07/08/21, Pipeline was officially added to BS github repository: https://github.com/brainstorm-tools/brainstorm3/blob/master/toolbox/process/functions/process_ft_sourceanalysis_dics.m
