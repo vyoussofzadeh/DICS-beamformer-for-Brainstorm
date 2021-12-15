@@ -6,7 +6,6 @@ This implementation has mainly focused on localizing induced activations due to 
 Before running,
 - Add Fieldtrip toolbox to the Matlab path, eg, ft_path = 'xx/fieldtrip_20190419'; addpath(ft_path); ft_defaults;
 - Estimate headmodel: overlapping spheres for surface-based and MRI volume for volumetric-based source mapping;
-- Estimate noise co-variance form trial responses: pipeline needs these details for initial settings only.
 
 To run the DICS-BF in BS,
 1. Copy "process_ft_sourceanalysis_DICS_BF.m" to BS directory, '../brainstorm3/toolbox/process/functions/'
