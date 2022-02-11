@@ -349,7 +349,8 @@ ResultsMat.GoodChannel   = iChannelsData;
 ResultsMat.SurfaceFile   = HeadModelMat.SurfaceFile;
 ResultsMat.nAvg          = DataMat.nAvg;
 ResultsMat.Leff          = DataMat.Leff;
-ResultsMat.Comment       = ['DICS-diff: ' Method, ' ',num2str(FOI),'Hz ', sprintf('%1.3fs-%1.3fs', PostStim)];
+ResultsMat.Comment       = ['DICS-diff: ' Method, ' ',sProcess.options.erds.Value, ' ', num2str(FOI),'Hz ', sprintf('%1.3fs-%1.3fs', PostStim)];
+
 switch lower(ResultsMat.HeadModelType)
     case 'volume'
         ResultsMat.GridLoc    = HeadModelMat.GridLoc;
