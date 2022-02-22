@@ -1,1 +1,0 @@
-The pipeline is available at the BS github repository: https://github.com/brainstorm-tools/brainstorm3/blob/master/toolbox/process/functions/process_ft_sourceanalysis_dics.m
