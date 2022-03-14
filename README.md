@@ -3,7 +3,7 @@ This is a DICS beamformer implementation for the Brainstorm (BS) software packag
 
 Note, the new pipeline is available at the BS github repository: https://github.com/brainstorm-tools/brainstorm3/blob/master/toolbox/process/functions/process_ft_sourceanalysis_dics.m
 
-And, the following details are based on older implementations of the pipleline.
+and, the following details are based on older implementations of the pipleline.
 
 This implementation has mainly focused on localizing induced activations due to task-MEG responses, eg, an overt definition naming language experiment.
 
