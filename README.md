@@ -2,6 +2,7 @@
 This is a DICS beamformer implementation for the Brainstorm (BS) software package. The dynamic imaging of coherent sources (DICS) beamformer technique enables the study of cortical sources of oscillatory activation in frequency-domain (Gross et al., 2001). DICS is a linearly constrained minimum variance beamformer in the frequency domain. It estimates the covariance matrix to calculate the spatial filter using the sensor-level cross-spectral density (CSD) matrix and applies the filter to the sensor-level CSD to reconstruct the source-level CSDs of pairwise voxel activations, and this provides coherence measures between the source pairs.
 
 Note, the new pipeline is available at the BS github repository: https://github.com/brainstorm-tools/brainstorm3/blob/master/toolbox/process/functions/process_ft_sourceanalysis_dics.m
+
 And, the following details are based on older implementations of the pipleline.
 
 This implementation has mainly focused on localizing induced activations due to task-MEG responses, eg, an overt definition naming language experiment.
