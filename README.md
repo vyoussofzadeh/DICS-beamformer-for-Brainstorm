@@ -6,6 +6,7 @@ Note that the new pipeline is available at the BS GitHub repository: https://git
 This implementation has mainly focused on localizing induced activations due to task-MEG responses, e.g., an overt definition naming language experiment.
 
 Before running, follow these steps:
+
 - Add the FieldTrip toolbox to the Matlab path, e.g., ft_path = 'xx/fieldtrip_20190419'; addpath(ft_path); ft_defaults;
 - Estimate headmodel: overlapping spheres for surface-based and MRI volume for volumetric-based source mapping;
 
